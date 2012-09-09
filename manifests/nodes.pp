@@ -5,7 +5,7 @@ node rserv2	{
 	
 	file	{	"/etc/motd"		:	source	=> 'puppet:///files/motd',	}
 	file	{	"/root/.vimrc"	: source	=> 'puppet:///files/vimrc',	}
-
+	file	{	"/root/.bashrc"	:	source	=>	'puppet:///files/vimrc',	}
 
 
 	}
