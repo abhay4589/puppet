@@ -6,3 +6,5 @@ ssh-agent bash
 
 keychain ~/.ssh/id_rsa
 . ~/.keychain/${HOSTNAME}-sh
+
+export EDITOR="vim"
