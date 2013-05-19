@@ -1,0 +1,4 @@
+search myhome.internal
+nameserver	10.0.10.25
+nameserver	192.168.150.2
+

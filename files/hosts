@@ -1,0 +1,4 @@
+127.0.0.1	localhost.localdomain	localhost	rserv1
+::1	localhost.localdomain	localhost6	localhost	rserv1
+192.168.60.25   puppet.myhome.internal	puppet
+192.168.60.28   rserv2.myhome.internal	rserv2

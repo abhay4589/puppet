@@ -1,0 +1,54 @@
+set nocompatible
+set t_Co=256
+set background=dark
+
+filetype on
+filetype indent on
+filetype plugin on
+
+set laststatus=2
+"set statusline=\ %f%m%r%h%w\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l,%v][%p%%]\ %)
+"set statusline=%<%f%m\ \[%{&ff}:%{&fenc}:%Y]\ %{getcwd()}\ \ \[%{strftime('%Y/%b/%d\ %a\ %I:%M\ %p')}\]\ %=\ Line:%l\/%L\ Column:%c%V\ %P
+set statusline=%<%f%m\ \ %{getcwd()}\ \ \ %=\ Line:%l\/%L\ Column:%c%V\ %P
+
+set backspace=2
+syntax on
+"syntax off
+
+
+let g:solarized_termcolors=256
+colorscheme	solarized
+set tabstop=2
+set shiftwidth=2
+
+set showmatch
+set incsearch
+"set number
+"set cursorline
+""set cursorcolumn
+set ignorecase
+set smartcase
+set ai
+"set smartindent
+set foldenable
+
+"By folkes
+set wc=<TAB>
+set wmnu
+set wildmode=list:longest,list:full
+set ruler
+set ru
+set splitbelow
+set gdefault
+set noedcompatible
+
+set hidden
+set history=700
+
+"This will remove the Auto-indetation while copy and Paste
+set paste
+
+nmap ,rc :e $MYVIMRC<cr>
+nmap <space> :
+
+autocmd bufwritepost .vimrc source $MYVIMRC 

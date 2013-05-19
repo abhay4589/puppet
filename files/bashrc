@@ -1,0 +1,34 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias e='echo $?'
+alias vi='vim'
+alias	c='clear'
+
+PATH=$PATH:/opt/python3/bin/
+export PATH
+
+
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+if [[ $- != *i* ]] ; then
+    # Use keychain:
+    keychain --quiet ~/.ssh/id_rsa
+    . ~/.keychain/${HOSTNAME}-sh
+
+    # Shell is non-interactive.  Be done now!
+    return
+fi
+
+eval `keychain --eval id_rsa`
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+
